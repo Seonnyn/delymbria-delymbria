@@ -9,7 +9,11 @@
  */
 require_once 'DelymbriaCoreError.php';
 
-class DelymbriaCore {
+/**
+ * Deep Main Core for all Delymbria Tools and the Game
+ */
+abstract class DelymbriaCore 
+{
     /**
      * Stores informations about the Core - Database
      * @var array 
@@ -115,9 +119,9 @@ class DelymbriaCore {
      */
     private function setDbData($dbdata)
     {
-        $this->_coredb->host = $dbdata["host"];
-        $this->_coredb->user = $dbdata["user"];
-        $this->_coredb->pass = $dbdata["pass"];
+        $this->_coredb["host"] = $dbdata["host"];
+        $this->_coredb["user"] = $dbdata["user"];
+        $this->_coredb["pass"] = $dbdata["pass"];
     }
     
     /**
