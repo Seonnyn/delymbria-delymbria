@@ -89,12 +89,12 @@ class DelymbriaCore
         $this->setConfigFile("DelymbriaConfig.ini");
         // First check for the availability of the Config File
         if($this->checkIniFile($this->_config) ) {
-            $this->_config_array = parse_ini_file($this->_config);
+            $this->_config_array = parse_ini_file($this->_config, TRUE);
             $this->setDbData($this->_config_array["database"]);
             $this->setIniFile($this->_config_array["coreinfos"]["inifiles"]);
             // Check for the availability of the INI File
             if($this->checkIniFile($this->_ini_file) ) {
-                $this->_ini_array = parse_ini_file($this->_ini_file);
+                $this->_ini_array = parse_ini_file($this->_ini_file, TRUE);
                 $this->setCoreData($this->_ini_array["Delymbria:core"]);
                 $this->setGameData($this->_ini_array["Delymbria:game"]);
                 $this->setASCData($this->_ini_array["Delymbria:asc"]);
