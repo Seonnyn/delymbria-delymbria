@@ -12,7 +12,7 @@ require_once 'DelymbriaCoreError.php';
 /**
  * Deep Main Core for all Delymbria Tools and the Game
  */
-abstract class DelymbriaCore 
+class DelymbriaCore 
 {
     /**
      * Stores informations about the Core - Database
